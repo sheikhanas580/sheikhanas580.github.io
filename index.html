@@ -3,151 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CryptoPulse - Master the Crypto Markets</title>
+    <title>CryptoPulse - Master the Art of Crypto Trading</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        body {
-            background-color: #0b0e11;
-            color: #eaecef;
-            line-height: 1.6;
-        }
-        header {
-            background-color: #181a20;
-            padding: 20px;
-            border-bottom: 1px solid #2b2f36;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            color: #f0b90b;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-        }
-        .logo span {
-            color: #ffffff;
-        }
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(rgba(11, 14, 17, 0.8), #0b0e11), url('https://unsplash.com') no-repeat center center/cover;
-            padding: 80px 20px;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 42px;
-            color: #ffffff;
-            margin-bottom: 20px;
-        }
-        .hero h1 span {
-            color: #f0b90b;
-        }
-        .hero p {
-            font-size: 18px;
-            color: #b7bdc6;
-            max-width: 600px;
-            margin: 0 auto 30px auto;
-        }
-        /* Main Layout */
-        .main-container {
-            max-width: 1200px;
-            margin: 40px auto;
-            padding: 0 20px;
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 30px;
-        }
-        @media (max-width: 768px) {
-            .main-container {
-                grid-template-columns: 1fr;
-            }
-        }
-        /* Blog Posts */
-        .blog-posts {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        .post-card {
-            background-color: #181a20;
-            border: 1px solid #2b2f36;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: transform 0.3s;
-        }
-        .post-card:hover {
-            transform: translateY(-5px);
-            border-color: #f0b90b;
-        }
-        .post-content {
-            padding: 25px;
-        }
-        .post-meta {
-            color: #848e9c;
-            font-size: 13px;
-            margin-bottom: 10px;
-        }
-        .post-title {
-            color: #ffffff;
-            font-size: 24px;
-            margin-bottom: 15px;
-        }
-        .post-excerpt {
-            color: #b7bdc6;
-            margin-bottom: 20px;
-        }
-        .read-more {
-            color: #f0b90b;
-            text-decoration: none;
-            font-weight: bold;
-            display: inline-block;
-        }
-        .read-more:hover {
-            text-decoration: underline;
-        }
-        /* Sidebar */
-        .sidebar {
-            display: flex;
-            flex-direction: column;
-            gap: 30px;
-        }
-        .widget {
-            background-color: #181a20;
-            border: 1px solid #2b2f36;
-            border-radius: 8px;
-            padding: 20px;
-        }
-        .widget h3 {
-            color: #f0b90b;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #2b2f36;
-            padding-bottom: 8px;
-        }
-        .widget p {
-            color: #b7bdc6;
-            font-size: 14px;
-        }
-        footer {
-            background-color: #181a20;
-            text-align: center;
-            padding: 30px;
-            margin-top: 60px;
-            border-top: 1px solid #2b2f36;
-            color: #848e9c;
-            font-size: 14px;
-        }
+        body { font-family: 'Segoe UI', sans-serif; line-height: 1.6; padding: 0; margin: 0; color: #cdd6f4; background-color: #0b0f19; }
+        .nav-container { background-color: #121824; padding: 20px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1f293d; }
+        .logo { color: #fff; font-size: 24px; font-weight: bold; text-decoration: none; }
+        .logo span { color: #f2a900; }
+        .hero { text-align: center; padding: 60px 20px; background: linear-gradient(180deg, #121824 0%, #0b0f19 100%); border-bottom: 1px solid #1f293d; }
+        .hero h1 { font-size: 42px; color: #fff; margin-bottom: 10px; }
+        .hero h1 span { color: #f2a900; }
+        .hero p { color: #8892b0; font-size: 18px; max-width: 600px; margin: auto; }
+        .main-container { max-width: 1100px; margin: 40px auto; padding: 0 20px; display: grid; grid-template-columns: 2fr 1fr; gap: 30px; }
+        .post-card { background-color: #121824; border: 1px solid #1f293d; padding: 25px; border-radius: 8px; margin-bottom: 25px; }
+        .post-meta { color: #8892b0; font-size: 13px; margin-bottom: 10px; }
+        .post-title { color: #fff; font-size: 24px; margin: 0 0 15px 0; }
+        .post-excerpt { color: #cdd6f4; font-size: 16px; margin-bottom: 20px; }
+        .read-more { color: #f2a900; text-decoration: none; font-weight: bold; font-size: 15px; }
+        .read-more:hover { text-decoration: underline; }
+        .sidebar { background-color: #121824; border: 1px solid #1f293d; padding: 25px; border-radius: 8px; height: fit-content; }
+        .widget { margin-bottom: 30px; }
+        .widget h3 { color: #f2a900; font-size: 18px; margin-top: 0; border-bottom: 1px solid #1f293d; padding-bottom: 8px; }
+        .widget p { color: #8892b0; font-size: 14px; margin-bottom: 0; }
+        footer { background-color: #121824; text-align: center; padding: 30px; margin-top: 60px; border-top: 1px solid #1f293d; color: #8892b0; font-size: 14px; }
+        @media (max-width: 768px) { .main-container { grid-template-columns: 1fr; } }
     </style>
 </head>
 <body>
@@ -164,40 +42,48 @@
     </section>
 
     <div class="main-container">
-        <!-- Blog Posts List -->
         <main class="blog-posts">
             
-            <!-- Post 1 -->
+            <!-- Post 1 (Aapka Naya Bitcoin Article) -->
             <article class="post-card">
                 <div class="post-content">
-                    <div class="post-meta">Published: October 2026 | Category: Trading Strategy</div>
-                    <h2 class="post-title">Top 3 Crypto Trading Strategies for Beginners in 2026</h2>
-                    <p class="post-excerpt">Entering the cryptocurrency market can be overwhelming due to high volatility. However, by mastering three core strategies—Dollar-Cost Averaging (DCA), Support and Resistance trading, and Trend Following—new traders can minimize risks and secure consistent gains. Learn how to map your charts and manage your emotions effectively.</p>
-                    <a href="#" class="read-more">Read Full Post →</a>
+                    <div class="post-meta">Published: October 2026 | Category: Market Update</div>
+                    <h2 class="post-title">Bitcoin Today Update (26 October 2026) - By Anas From Daska</h2>
+                    <p class="post-excerpt">Yesterday Bitcoin Go Below $80,000 And Many People Lost Money. Almost $837 Million Liquidated In One Day. Learn the 3 big reasons why market is down and next support levels...</p>
+                    <a href="bitcoin-update.html" class="read-more">Read Full Post →</a>
                 </div>
             </article>
 
             <!-- Post 2 -->
             <article class="post-card">
                 <div class="post-content">
+                    <div class="post-meta">Published: October 2026 | Category: Trading Strategy</div>
+                    <h2 class="post-title">Top 3 Crypto Trading Strategies for Beginners in 2026</h2>
+                    <p class="post-excerpt">Entering the cryptocurrency market can be overwhelming due to high volatility. However, by mastering three core strategies—Dollar-Cost Averaging (DCA), Support and Resistance trading...</p>
+                    <a href="#" class="read-more">Read Full Post →</a>
+                </div>
+            </article>
+
+            <!-- Post 3 -->
+            <article class="post-card">
+                <div class="post-content">
                     <div class="post-meta">Published: October 2026 | Category: Risk Management</div>
                     <h2 class="post-title">Why 90% of Crypto Day Traders Fail (And How to Avoid It)</h2>
-                    <p class="post-excerpt">Most retail traders lose money in crypto not because their analysis is wrong, but because their risk management is non-existent. Over-leveraging and trading without a strict Stop-Loss are the biggest account killers. In this guide, we break down the 1% risk rule that will keep you in the game for the long haul.</p>
+                    <p class="post-excerpt">Most retail traders lose money in crypto not because their analysis is wrong, but because they have bad risk management and emotions. Learn how to map your charts effectively...</p>
                     <a href="#" class="read-more">Read Full Post →</a>
                 </div>
             </article>
 
         </main>
 
-        <!-- Sidebar Widgets -->
         <aside class="sidebar">
             <div class="widget">
                 <h3>About CryptoPulse</h3>
-                <p>Welcome to CryptoPulse! We provide daily insights, tutorial guides, and professional market breakdowns to help you navigate the blockchain revolution safely.</p>
+                <p>Welcome to CryptoPulse! We provide daily insights, tutorial guides, and professional market breakdowns.</p>
             </div>
             <div class="widget">
                 <h3>Market Disclaimer</h3>
-                <p>Trading cryptocurrencies involves high risk. All content on this website is for educational purposes only and should not be taken as financial advice.</p>
+                <p>Trading cryptocurrencies involves high risk. All content on this website is for educational purposes only.</p>
             </div>
         </aside>
     </div>
@@ -207,8 +93,4 @@
     </footer>
 
 </body>
-</html
-<div style="margin: 20px auto; padding: 20px; border: 2px solid #f2a900; border-radius: 8px; background-color: #fffdf5; max-width: 700px; font-family: sans-serif;">
-    <h3 style="margin-top: 0;"><a href="bitcoin-update.html" style="color: #f2a900; text-decoration: none; font-size: 20px; font-weight: bold;">🔥 Latest Update: Bitcoin Today Update (26 October 2026)</a></h3>
-    <p style="color: #555; margin-bottom: 0; font-size: 15px;">Bitcoin price dropped and $837M liquidated! Read my full analysis and reasons. - By Anas From Daska</p>
-</div>
+</html>
